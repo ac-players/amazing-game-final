@@ -1,6 +1,5 @@
 package org.academiadecodigo.bootcamp.gfx.simplegfx;
 
-import org.academiadecodigo.bootcamp.grid.GridColor;
 import org.academiadecodigo.bootcamp.grid.GridDirection;
 import org.academiadecodigo.bootcamp.grid.position.AbstractGridPosition;
 import org.academiadecodigo.bootcamp.grid.position.GridPosition;
@@ -30,9 +29,10 @@ public class SimpleGfxGridPosition extends AbstractGridPosition {
         super(col, row, grid,0);
         simpleGfxGrid = grid;
 
-            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "D:\\projects\\amazing game versão hugo\\resources\\car.jpg");
+            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/fundo do jogo.jpg");
 
         }
+
 
     /**
      * Simple graphics position constructor
@@ -45,10 +45,10 @@ public class SimpleGfxGridPosition extends AbstractGridPosition {
         super(col, row, grid,type);
         simpleGfxGrid = grid;
         if(type == 0) {
-            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/gokussj2222.png");
+            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/mini goku.png");
         pic.grow(-8,-8);
         }else if(type == 1) {
-            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/frieza_namek-removebg222.png");
+            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/smallBall.png");
         pic.grow(-8,-8);
         }else if(type == 2) {
         pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/cellwithoutbackground pequeno.png");
@@ -96,14 +96,5 @@ public class SimpleGfxGridPosition extends AbstractGridPosition {
 
     }
 
-    /**
-     * @see AbstractGridPosition#setColor(GridColor)
-     */
-    @Override
-    public void setColor(GridColor color) {
 
-        super.setColor(color);
-      //  rectangle.setColor(SimpleGfxColorMapper.getColor(color));
-
-    }
 }

@@ -5,6 +5,7 @@ import org.academiadecodigo.bootcamp.car.ObstacleGenerator;
 import org.academiadecodigo.bootcamp.car.Player;
 import org.academiadecodigo.bootcamp.grid.Grid;
 import org.academiadecodigo.bootcamp.grid.GridFactory;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 
 //The game logic
@@ -17,6 +18,7 @@ public class Game {
     //Container of Cars
     private Obstacle[] obstacles;
     private Player player;
+    private Picture enemy;
 
     //Animation delay
     private int delay;
@@ -76,12 +78,16 @@ public class Game {
 
         while (!player.isCrashed()) {
 
+                enemy = new Picture((int) ((((Math.random()) * grid.getCols() * 75))-300), 1, "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/majin_buu_png_832541.G7wNy (1).png");
+                enemy.draw();
+
             // Pause for a while
             Thread.sleep(delay);
 
             moveAllCars();
-
+            enemy.delete();
         }
+        
         musicObject.stopMusic(musicObject);
     }
 

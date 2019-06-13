@@ -14,7 +14,7 @@ public class SimpleGfxGrid implements Grid {
     private int rows;
     private int x;
     private int y;
-    private int cellSize = 45;
+    private int cellSize = 55;
     private Rectangle grid;
     private Picture grid2;
 
@@ -33,8 +33,8 @@ public class SimpleGfxGrid implements Grid {
     public void init() {
 
         grid = new Rectangle(getX()+PADDING, getY()+PADDING, cols*cellSize, rows*cellSize);
-        grid2 = new Picture(getX(),getY(),"/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/tunnel_road.jpg");
-        grid2.grow (65, 300);
+        grid2 = new Picture(getX(),getY(),"/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/387102.jpg");
+        grid2.grow (65, 200);
         grid2.translate (60,0);
 
 

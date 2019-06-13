@@ -1,6 +1,5 @@
 package org.academiadecodigo.bootcamp.grid.position;
 
-import org.academiadecodigo.bootcamp.grid.GridColor;
 import org.academiadecodigo.bootcamp.grid.GridDirection;
 
 /**
@@ -30,19 +29,8 @@ public interface GridPosition {
      */
     public void setPos(int col, int row);
 
-    /**
-     * Gets the position getColor
-     *
-     * @return the position getColor
-     */
-    public GridColor getColor();
 
-    /**
-     * Changes the getColor of this grid position
-     *
-     * @param color the new position getColor
-     */
-    public void setColor(GridColor color);
+
 
     /**
      * Displays the position in the grid

@@ -12,7 +12,7 @@ public class Player implements KeyboardHandler{
 
     private GridPosition pos;
     private Grid grid;
-    private ObstacleType obstacleType = ObstacleType.PLAYER;
+
     private boolean crashed = false; // the car crashed state
 
     public boolean isCrashed() {
@@ -22,9 +22,9 @@ public class Player implements KeyboardHandler{
     public Player(Grid grid, GridPosition pos) {
 
         this.pos = pos;
-        this.obstacleType = obstacleType;
 
-        pos.setColor(obstacleType.getColor());
+
+
     }
 
     public GridPosition getPos() {

@@ -10,19 +10,19 @@ abstract public class Obstacle {
 
     private GridPosition pos;
     private Grid grid;
-    private ObstacleType obstacleType;
+
 
     // Allow direct access from subclasses
     protected CollisionDetector collisionDetector;
     protected GridDirection currentDirection;
 
     //constructs a new obstacle
-    public Obstacle(GridPosition pos, ObstacleType obstacleType) {
+    public Obstacle(GridPosition pos) {
 
         this.pos = pos;
-        this.obstacleType = obstacleType;
 
-        pos.setColor(obstacleType.getColor());
+
+
         currentDirection = GridDirection.DOWN;
 
     }
@@ -74,7 +74,7 @@ abstract public class Obstacle {
 
             
             if(Math.random() < 0.6){
-                getPos().setPos((int)(Math.random() * grid.getCols()), -1);
+                getPos().setPos((int)(Math.random() * grid.getCols()), 0);
                 pos.show();
             }
         }

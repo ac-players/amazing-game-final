@@ -5,7 +5,7 @@ public class Dodge {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Game g = new Game(14, 18, 140);
+        Game g = new Game(14, 16, 140);
 
         g.init();
         g.start();

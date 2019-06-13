@@ -1,7 +1,6 @@
 package org.academiadecodigo.bootcamp.grid.position;
 
 import org.academiadecodigo.bootcamp.grid.Grid;
-import org.academiadecodigo.bootcamp.grid.GridColor;
 import org.academiadecodigo.bootcamp.grid.GridDirection;
 
 /**
@@ -13,7 +12,7 @@ public abstract class AbstractGridPosition implements GridPosition {
 
     private int col;
     private int row;
-    private GridColor color;
+
     private Grid grid;
     private int type;
 
@@ -28,7 +27,7 @@ public abstract class AbstractGridPosition implements GridPosition {
         this.col = col;
         this.row = row;
         this.grid = grid;
-        this.color = GridColor.NOCOLOR;
+
         this.type = type;
     }
 
@@ -62,22 +61,7 @@ public abstract class AbstractGridPosition implements GridPosition {
         return row;
     }
 
-    /**
-     * @see GridPosition#getColor()
-     */
-    @Override
-    public GridColor getColor() {
-        return color;
-    }
 
-    /**
-     * @see GridPosition#setColor(GridColor)
-     */
-    @Override
-    public void setColor(GridColor color) {
-        this.color = color;
-        show();
-    }
 
     /**
      * @see GridPosition#moveInDirection(GridDirection, int)
@@ -162,7 +146,6 @@ public abstract class AbstractGridPosition implements GridPosition {
         return "GridPosition{" +
                 "col=" + col +
                 ", row=" + row +
-                ", getColor=" + color +
                 '}';
     }
 
