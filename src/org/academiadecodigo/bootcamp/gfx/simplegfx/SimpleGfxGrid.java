@@ -2,11 +2,8 @@ package org.academiadecodigo.bootcamp.gfx.simplegfx;
 
 import org.academiadecodigo.bootcamp.grid.Grid;
 import org.academiadecodigo.bootcamp.grid.position.GridPosition;
-import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-
-import java.awt.*;
 
 public class SimpleGfxGrid implements Grid {
 
@@ -33,7 +30,7 @@ public class SimpleGfxGrid implements Grid {
     public void init() {
 
         grid = new Rectangle(getX()+PADDING, getY()+PADDING, cols*cellSize, rows*cellSize);
-        grid2 = new Picture(getX(),getY(),"/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/387102.jpg");
+        grid2 = new Picture(getX(),getY(), "background.jpg");
         grid2.grow (65, 200);
         grid2.translate (60,0);
 

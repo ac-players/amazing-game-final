@@ -29,7 +29,7 @@ public class SimpleGfxGridPosition extends AbstractGridPosition {
         super(col, row, grid,0);
         simpleGfxGrid = grid;
 
-            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/fundo do jogo.jpg");
+
 
         }
 
@@ -45,22 +45,15 @@ public class SimpleGfxGridPosition extends AbstractGridPosition {
         super(col, row, grid,type);
         simpleGfxGrid = grid;
         if(type == 0) {
-            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/mini goku.png");
+            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "mini goku.png");
         pic.grow(-8,-8);
         }else if(type == 1) {
-            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/smallBall.png");
+            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "smallBall.png");
         pic.grow(-8,-8);
-        }else if(type == 2) {
-        pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/cellwithoutbackground pequeno.png");
-        pic.grow(-8,-8);
-    }else if(type == 3) {
-            pic = new Picture((col * grid.getCellSize()) + grid.getX(), (row * grid.getCellSize()) + grid.getY(), "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/buu pequeno.png");
-            pic.grow(-8,-8);
         }
 
         pic.draw();
-        //rectangle = new Rectangle((col*grid.getCellSize()) + grid.getX(), (row*grid.getCellSize()) + grid.getY(), grid.getCellSize(), grid.getCellSize());
-        //rectangle.draw();
+
     }
 
     /**
@@ -69,7 +62,7 @@ public class SimpleGfxGridPosition extends AbstractGridPosition {
     @Override
     public void show() {
 
-        //rectangle.fill();
+
         pic.draw();
     }
 
@@ -78,7 +71,7 @@ public class SimpleGfxGridPosition extends AbstractGridPosition {
      */
     @Override
     public void hide() {
-        //rectangle.delete();
+
         pic.delete();
 
     }

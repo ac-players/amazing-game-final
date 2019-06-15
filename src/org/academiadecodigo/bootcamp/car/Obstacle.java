@@ -43,29 +43,7 @@ abstract public class Obstacle {
     abstract public void move();
 
 
-    //Chooses a new direction for the car
 
-    /*
-    public GridDirection chooseDirection() {
-
-
-        // Let's move in the same direction by default
-        GridDirection newDirection = currentDirection;
-
-        // Sometimes, we want to change direction...
-        if (Math.random() > ((double) directionChangeLevel) / 10) {
-            newDirection = GridDirection.values()[(int) (Math.random() * GridDirection.values().length)];
-
-            // but we do not want to perform U turns..
-            if (newDirection.isOpposite(currentDirection)) {
-                return chooseDirection();
-            }
-        }
-
-        return newDirection;
-
-    }
-    */
 
     // accelarates the object towards the player
     public void accelerate() {

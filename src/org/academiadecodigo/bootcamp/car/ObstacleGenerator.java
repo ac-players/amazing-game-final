@@ -6,10 +6,10 @@ import org.academiadecodigo.bootcamp.grid.Grid;
 public class ObstacleGenerator {
 
     //returns a new obstacle
-    public static Obstacle getNewCar(Grid grid) {
+    public static Obstacle getEnergyBalls(Grid grid) {
 
-        //Obstacle obstacle = new Car(grid.makeGridPosition((int)(Math.random() * grid.getCols()- 1), 0,(int) ((Math.random()*3)+1)));
-        Obstacle obstacle = new Car(grid.makeGridPosition((int)(Math.random() * grid.getCols()- 1), 1,1));
+
+        Obstacle obstacle = new EnergyBalls(grid.makeGridPosition((int)(Math.random() * grid.getCols()- 1), 1,1));
         return obstacle;
 
     }

@@ -3,6 +3,7 @@ package org.academiadecodigo.bootcamp;
 import org.academiadecodigo.bootcamp.car.Obstacle;
 import org.academiadecodigo.bootcamp.car.Player;
 import org.academiadecodigo.bootcamp.grid.position.GridPosition;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class CollisionDetector {
 
@@ -31,11 +32,16 @@ public class CollisionDetector {
 
     //Checks for collisions with specific obstacle
 
-    public void check(Obstacle obstacle, Player player) {
+    public void check(Obstacle obstacle, Player player)  {
 
         for (Obstacle ic : obstacles) {
 
             if (ic.getPos().equals(player.getPos())) {
+                Picture explosion = new Picture (player.getPos().getCol()*55, player.getPos().getRow()*55, "explosion.png");
+                Audio explosionSound = new Audio();
+                explosionSound.explosionSound();
+                explosion.draw();
+
                 player.crash();
             }
 

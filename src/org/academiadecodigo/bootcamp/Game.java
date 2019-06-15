@@ -43,13 +43,13 @@ public class Game {
 
 
 
-    public void init() {
+    public void init() throws InterruptedException {
 
 
 
         grid.init();
 
-        //player = new Player(grid, (grid.makeGridPosition(grid.getCols()/2, grid.getRows()-2)));
+
         player = new Player(grid, (grid.makeGridPosition(grid.getCols()/2, grid.getRows()-2, 0)));
 
         obstacles = new Obstacle[grid.getCols()+6];
@@ -57,11 +57,17 @@ public class Game {
     
         for (int i = 0; i < obstacles.length; i++) {
 
-            obstacles[i] = ObstacleGenerator.getNewCar(grid);
+            obstacles[i] = ObstacleGenerator.getEnergyBalls(grid);
             obstacles[i].setCollisionDetector(collisionDetector);
             obstacles[i].setGrid(grid);
 
         }
+
+        Picture gameStart = new Picture(45, 100, "GameStart.png");
+        gameStart.grow(-32, -32);
+        gameStart.draw();
+        Thread.sleep(3000, 1000);
+        gameStart.delete();
     }
 
     /**
@@ -70,15 +76,15 @@ public class Game {
      * @throws InterruptedException
      */
     public void start() throws InterruptedException {
-        String filepath = "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/y2mate.com - dragon_ball_super_soundtrack_full_ultimate_battle_akira_kushida_lyrics_cc_GH9u4eZQGk8.wav";
+        String filepath = "song.wav";
 
-        musicStuff musicObject  = new musicStuff();
-        musicObject.playMusic(filepath);
+        Audio musicObject  = new Audio();
+        musicObject.runAudio();
         player.move();
 
         while (!player.isCrashed()) {
 
-                enemy = new Picture((int) ((((Math.random()) * grid.getCols() * 75))-300), 1, "/Users/codecadet/Desktop/amazing game project/amazing game goku/resources/majin_buu_png_832541.G7wNy (1).png");
+              enemy = new Picture((int) ((((Math.random()) * grid.getCols() * 75))-300), 1, "buu embruxado.png");
                 enemy.draw();
 
             // Pause for a while
@@ -88,13 +94,16 @@ public class Game {
             enemy.delete();
         }
         
-        musicObject.stopMusic(musicObject);
+        Thread.sleep(500,1000);
+        musicObject.stopAudio();
+        Picture gameOver = new Picture(45, 100, "GameOver.png");
+        gameOver.draw();
     }
 
     /**
      * Moves all obstacles
      */
-    public void moveAllCars() {
+    public void moveAllCars() throws InterruptedException {
 
         for (Obstacle o : obstacles) {
 
