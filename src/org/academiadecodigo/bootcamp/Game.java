@@ -76,7 +76,6 @@ public class Game {
      * @throws InterruptedException
      */
     public void start() throws InterruptedException {
-        String filepath = "song.wav";
 
         Audio musicObject  = new Audio();
         musicObject.runAudio();

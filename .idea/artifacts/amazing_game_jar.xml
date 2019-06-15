@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="amazing-game:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/amazing_game_jar</output-path>
+    <root id="archive" name="amazing-game-vers-o-bue-fixe-quase-final.jar">
+      <element id="module-output" name="amazing-game-vers-o-bue-fixe-quase-final" />
+      <element id="library" level="project" name="amazing-game-vers-o-bue-fixe-quase-final" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/simplegraphics.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
